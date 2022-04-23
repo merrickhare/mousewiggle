@@ -1,14 +1,10 @@
 import pyautogui as PAG
-from tkinter import *
-import threading
+import PySimpleGUI as pg
 
 
+layout = [[pg.Text("Mouse Wiggle App")],[pg.Checkbox("Start",default=False,key="CheckOne")],[pg.Text("Interval")],[pg.Button("Close")]]
 
-def wiggleMouse():
-  threading.Timer(5.0, wiggleMouse).start()
-  PAG.move(30,40)
-
-wiggleMouse( )
+pg.Window("Mouse Wiggle",layout=layout,resizable=True).read()
 
 
 
