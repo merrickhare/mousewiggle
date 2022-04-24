@@ -12,6 +12,11 @@ while True:  # Event Loop
     print(event, values)
     if event == pg.WIN_CLOSED or event == 'stop_button':
         break
+    if event == 'start_button':
+        print("hello world")
+
+
+  
    
 
 
