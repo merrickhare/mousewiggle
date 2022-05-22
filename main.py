@@ -12,9 +12,9 @@ def wiggle(intervalNumber,numberOfLoops):
         pag.move(-100,-100)
 
 pg.theme('Tan')
-layout = [[pg.Text("Choose Interval"),pg.Radio("1 Second","Group1",key="radio1"),pg.Radio("3 Second","Group1",key="radio3"),pg.Radio("5 Second","Group1",key="radio5")],[pg.Button("Start",key="start_button"),pg.Button("Stop",key="stop_button")]]
+layout = [[pg.Text("Interval between wiggle"),pg.Radio("1 Second","Group1",key="radio1"),pg.Radio("3 Second","Group1",key="radio3"),pg.Radio("5 Second","Group1",key="radio5")],[pg.Text("Run for?"),pg.Radio("5 Minutes", "Group2",key="radio6"),pg.Radio("10 Minutes", "Group2",key="raido7"),pg.Radio("unlimited","Group2",key="radio8")],[pg.Button("Start",key="start_button"),pg.Button("Stop",key="stop_button")]]
 
-window = pg.Window("Mouse Wiggler", layout=layout,icon="pointer.png", size=(375,75))
+window = pg.Window("Mouse Wiggler", layout=layout,icon="pointer.png", size=(400,90))
 
 while True:  # Event Loop
     event, values = window.read()
