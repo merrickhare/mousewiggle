@@ -1,10 +1,15 @@
 from optparse import Values
 import PySimpleGUI as pg
 import pyautogui as pag
+from time import sleep
 
 
-def wiggle(intervalNumber):
-    pag.move(100,100,intervalNumber)
+def wiggle(intervalNumber,numberOfLoops):
+    sleep(2)
+    for loops in numberOfLoops:
+        pag.move(100,100)
+        sleep(intervalNumber)
+        pag.move(-100,-100)
 
 pg.theme('Tan')
 layout = [[pg.Text("Choose Interval"),pg.Radio("1 Second","Group1",key="radio1"),pg.Radio("3 Second","Group1",key="radio3"),pg.Radio("5 Second","Group1",key="radio5")],[pg.Button("Start",key="start_button"),pg.Button("Stop",key="stop_button")]]
