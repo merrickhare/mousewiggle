@@ -3,6 +3,10 @@ import PySimpleGUI as pg
 import pyautogui as pag
 from time import sleep
 
+# Author: Merrick Hare
+# Version: 1.0
+
+
 
 def wiggle(intervalNumber,numberOfLoops):
     sleep(2)
